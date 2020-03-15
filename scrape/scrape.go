@@ -363,6 +363,7 @@ func (s *targetScraper) scrape(ctx context.Context, w io.Writer) error {
 			return err
 		}
 		req.Header.Set("User-Agent", userAgentHeader)
+		req.Header.Set("Content-Type", "application/protobuf")
 
 		s.req = req
 	}
